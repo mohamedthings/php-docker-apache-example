@@ -4,29 +4,31 @@ pipeline {
   stages {
     stage('Clone repo') {
       steps {
-
+        sh 'echo "Clone passed"'
       }
   //    checkout scm
   //  sh 'echo "Clone"'
     }
     stage ('Build stage'){
       steps {
+        sh 'echo "Build passed"'
         //app = docker.build(".")
     //      sh 'echo "Build"'
       }
     }
     stage('Testing Stage') {
       steps {
+        sh 'echo "Test passed"'
 
       }
       //sh 'echo "Testing"'
       //app.inside{
-        //sh 'echo "Test passed"'
       //}
     }
     stage('Push image') {
 
       steps {
+        sh 'echo "Push passed"'
 
       }
       //sh 'echo "Push Image"'
@@ -36,8 +38,8 @@ pipeline {
       }
 
     stage('Deploy stage') {
-    //  sh 'echo "Deploy"'
     steps {
+      sh 'echo "Deploy passed"'
 
     }
     }
