@@ -11,7 +11,7 @@ node {
     }
 
     stage('Build image') {
-      app = docker.build("myphpproject",".")
+      app = docker.build("myphpproject34",".")
 
     }
 
