@@ -1,5 +1,5 @@
-node {
-  //agent any
+pipeline {
+  agent any
 //  def app
   stages {
     stage('Clone repo') {
