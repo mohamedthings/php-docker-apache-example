@@ -25,10 +25,8 @@ pipeline {
           //app.push("latest")
       }
 
-    }
     stage('Deploy stage') {
       sh 'echo "Deploy"'
-
     }
   }
-}
+  }
