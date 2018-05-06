@@ -11,15 +11,17 @@ node {
     }
 
     stage('Build image') {
-      app = docker.build(".")
+      app = docker.build()
 
     }
 
     stage('Push image') {
+      sh 'echo "push"'
 
     }
 
     stage('Deploy') {
+      sh 'echo "Deploy"'
 
     }
 //  }
