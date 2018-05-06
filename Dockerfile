@@ -1,7 +1,7 @@
 FROM php:7.0-apache
 
-RUN apt-get update && \
-    apt-get install -y php7-mysql && \
-    apt-get clean
+RUN apt-get update
+#    apt-get install -y php-mysql && \
+#    apt-get clean
 
 COPY myapp /var/www/html/
