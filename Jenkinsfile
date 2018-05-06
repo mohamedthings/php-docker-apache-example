@@ -7,7 +7,7 @@ def app
 node {
   //ansiColor('xterm') {
     stage('Clone repository') {
-
+      sh 'ls'
     }
 
     stage('Build image') {
