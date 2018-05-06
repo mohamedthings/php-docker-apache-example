@@ -1,6 +1,6 @@
 pipeline {
   agent any
-//  def app
+  def app
   stages {
     stage('Clone repo') {
       steps {
@@ -12,7 +12,7 @@ pipeline {
     stage ('Build stage'){
       steps {
         sh 'echo "Build passed"'
-        //app = docker.build(".")
+        app = docker.build(".")
     //      sh 'echo "Build"'
       }
     }
