@@ -29,6 +29,7 @@ pipeline {
 
       steps {
         sh 'echo "Push passed"'
+        sh 'ls'
 
       }
       //sh 'echo "Push Image"'
