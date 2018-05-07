@@ -1,3 +1,5 @@
+def app
+
 pipeline {
   agent any
   //def app
@@ -12,7 +14,7 @@ pipeline {
     stage ('Build stage'){
       steps {
         sh 'echo "Build passed"'
-    //    app = docker.build(".")
+        app = docker.build("myphpproject55",".")
     //      sh 'echo "Build"'
       }
     }
