@@ -30,6 +30,7 @@ pipeline {
       steps {
         sh 'echo "Push passed"'
         sh 'ls'
+        sh 'cat Dockerfile'
 
       }
       //sh 'echo "Push Image"'
