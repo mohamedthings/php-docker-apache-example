@@ -1,5 +1,5 @@
 def app
-node('Master') {
+node {
   //agent any
   //def app
   //stages {
