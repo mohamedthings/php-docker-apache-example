@@ -34,6 +34,7 @@ node {
         sh 'echo "Push passed"'
         sh 'ls'
         sh 'cat Dockerfile'
+        sh 'echo $docker-hub-credentials'
 
       //}
       //sh 'echo "Push Image"'
