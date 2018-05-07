@@ -1,9 +1,8 @@
 def app
-
-pipeline {
-  agent any
+node('Master') {
+  //agent any
   //def app
-  stages {
+  //stages {
     stage('Clone repo') {
       steps {
         sh 'echo "Clone passed"'
@@ -47,5 +46,5 @@ pipeline {
 
     }
     }
-  }
+  //}
   }
