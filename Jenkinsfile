@@ -1,3 +1,5 @@
+#!groovy
+
 def app
 node {
   //agent any
