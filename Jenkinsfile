@@ -1,28 +1,47 @@
-def app
-//def imageName = 'gcr.io/hungerstation-configs/delivery-portal'
-//def deployableBranches = ["staging", "master"]
-//def channels = ["hs-logistics"]
-//def serviceName = 'delivery-portal'
-
-node {
-  //ansiColor('xterm') {
-    stage('Clone repository') {
-      sh 'ls'
+pipeline {
+  agent any
+  def app
+  stages {
+    stage('Clone repo') {
+      steps {
+        sh 'echo "Clone passed"'
+      }
+  //    checkout scm
+  //  sh 'echo "Clone"'
     }
-
-    stage('Build image') {
-      app = docker.build("myphpproject34",".")
-
+    stage ('Build stage'){
+      steps {
+        sh 'echo "Build passed"'
+        app = docker.build(".")
+    //      sh 'echo "Build"'
+      }
     }
+    stage('Testing Stage') {
+      steps {
+        sh 'echo "Test passed"'
 
+      }
+      //sh 'echo "Testing"'
+      //app.inside{
+      //}
+    }
     stage('Push image') {
-      sh 'echo "push"'
+
+      steps {
+        sh 'echo "Push passed"'
+
+      }
+      //sh 'echo "Push Image"'
+      //docker.writeRegistry('https://registry.hub.docker.com','docker-hub-credentials'){
+        //  app.push("${env.BUILD_NUMBER}")
+          //app.push("latest")
+      }
+
+    stage('Deploy stage') {
+    steps {
+      sh 'echo "Deploy passed"'
 
     }
-
-    stage('Deploy') {
-      sh 'echo "Deploy"'
-
     }
-//  }
-}
+  }
+  }
