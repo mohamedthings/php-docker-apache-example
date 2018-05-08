@@ -15,7 +15,7 @@ node {
     stage ('Build stage'){
       //steps {
         sh 'echo "Build passed"'
-        app = docker.build("myphpproject55/hello")
+        app = docker.build("mohamedthings/hello")
     //      sh 'echo "Build"'
       //}
     }
