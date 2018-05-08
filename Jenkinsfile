@@ -43,10 +43,10 @@ node {
         sh 'echo "NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN"'
       //}
       //sh 'echo "Push Image"'
-      //docker.writeRegistry('https://registry.hub.docker.com','docker-hub-credentials'){
-        //  app.push("${env.BUILD_NUMBER}")
-          //app.push("latest")
-      //}
+      docker.withRegistry('https://registry.hub.docker.com','docker-hub-credentials'){
+          app.push("${env.BUILD_NUMBER}")
+          app.push("latest")
+      }
       sh 'echo "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ"'
     }
 
