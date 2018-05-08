@@ -39,13 +39,14 @@ node {
         sh 'echo "NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN"'
         //print "Commit : ${COMMIT}"
         //sh 'echo ${docker-hub-credentials}'
-
+        print "Environment will be : ${env.BUILD_NUMBER}"
+        sh 'echo "NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN"'
       //}
       //sh 'echo "Push Image"'
-      docker.writeRegistry('https://registry.hub.docker.com','docker-hub-credentials'){
-          app.push("${env.BUILD_NUMBER}")
-          app.push("latest")
-      }
+      //docker.writeRegistry('https://registry.hub.docker.com','docker-hub-credentials'){
+        //  app.push("${env.BUILD_NUMBER}")
+          //app.push("latest")
+      //}
       sh 'echo "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ"'
     }
 
