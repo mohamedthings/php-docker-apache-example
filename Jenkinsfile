@@ -2,6 +2,7 @@
 
 def app
 node {
+  ansiColor('xterm') {
   //agent any
   //def app
   //stages {
@@ -54,5 +55,6 @@ node {
 
     //}
     }
+  }
   //}
   }
