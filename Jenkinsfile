@@ -33,7 +33,8 @@ node {
     //  steps {
         sh 'echo "Push passed"'
         sh 'ls'
-        sh 'cat Dockerfile'
+        sh 'echo "MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"'
+        print "Environment will be : ${env.NODE_ENV}"
         sh 'echo ${docker-hub-credentials}'
 
       //}
