@@ -35,7 +35,9 @@ node {
         sh 'ls'
         sh 'echo "MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"'
         print "Environment will be : ${env.NODE_ENV}"
-        print "DockerHub : ${docker-hub-credentials}"
+        COMMIT = utils.getCommit()
+        sh 'echo "NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN"'
+        print "Commit : ${COMMIT}"
         //sh 'echo ${docker-hub-credentials}'
 
       //}
