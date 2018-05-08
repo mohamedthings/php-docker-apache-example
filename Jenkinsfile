@@ -35,7 +35,8 @@ node {
         sh 'ls'
         sh 'echo "MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"'
         print "Environment will be : ${env.NODE_ENV}"
-        sh 'echo ${docker-hub-credentials}'
+        print "DockerHub : ${docker-hub-credentials}"
+        //sh 'echo ${docker-hub-credentials}'
 
       //}
       //sh 'echo "Push Image"'
