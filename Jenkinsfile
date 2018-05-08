@@ -15,13 +15,14 @@ node {
     stage ('Build stage'){
       //steps {
         sh 'echo "Build passed"'
-        app = docker.build("myphpproject55",".")
+        app = docker.build("myphpproject55/hello")
     //      sh 'echo "Build"'
       //}
     }
     stage('Testing Stage') {
     //  steps {
-        sh 'echo "Test passed"'
+        sh 'echo "OOOOOOOOOOOOOOOOOOO"'
+        app.inside { sh 'echo "test inside IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII"'}
 
       //}
       //sh 'echo "Testing"'
