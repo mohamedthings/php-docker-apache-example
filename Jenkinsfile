@@ -53,7 +53,9 @@ node {
     stage('Deploy stage') {
   //  steps {
       sh 'echo "Deploy passed"'
-
+      sh 'kubectl run myphp2 --image=registry.hub.docker.com/mohamedthings/hello:"${env.BUILD_NUMBER}" --port=80'
+      sh 'kubectl expose deployment myphp2 --type=LoadBalancer'
+      sh 'minikube service myphp2 --url'
     //}
     }
   //}
