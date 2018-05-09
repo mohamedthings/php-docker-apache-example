@@ -53,9 +53,9 @@ node {
     stage('Deploy stage') {
   //  steps {
       sh 'echo "Deploy passed"'
-      sh 'kubectl run myphp2 --image=registry.hub.docker.com/mohamedthings/hello:38 --port=80'
-      sh 'kubectl expose deployment myphp2 --type=LoadBalancer'
-      sh 'minikube service myphp2 --url'
+      sh 'sudo kubectl run myphp2 --image=registry.hub.docker.com/mohamedthings/hello:39 --port=80'
+      sh 'sudo kubectl expose deployment myphp2 --type=LoadBalancer'
+      sh 'sudo minikube service myphp2 --url'
     //}
     }
   //}
