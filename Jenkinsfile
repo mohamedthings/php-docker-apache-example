@@ -54,8 +54,9 @@ node {
   //  steps {
       sh 'echo "Deploy passed"'
       sh 'whoami'
-      sh'sudo -H -u devops bash -c "whoami"'
-      sh 'OOOOOOOOOOOOOOOOOOOOOo'
+      sh'sudo -H -u devops bash -c "kubectl run myphp5 --image=registry.hub.docker.com/mohamedthings/hello:46 --port=80"'
+      sh'sudo -H -u devops bash -c "kubectl expose deployment myphp5 --type=LoadBalance"'
+      sh'sudo -H -u devops bash -c "minikube service myphp5 --url"'
       //sh 'sudo kubectl run myphp2 --image=registry.hub.docker.com/mohamedthings/hello:40 --port=80'
       //sh 'sudo kubectl expose deployment myphp2 --type=LoadBalancer'
       //sh 'sudo minikube service myphp2 --url'
