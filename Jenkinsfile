@@ -54,7 +54,7 @@ node {
   //  steps {
       sh 'echo "Deploy passed"'
       sh 'whoami'
-      sh'sudo -H -u devops bash -c 'whoami''
+      sh'sudo -H -u devops bash -c "whoami"'
       sh 'OOOOOOOOOOOOOOOOOOOOOo'
       //sh 'sudo kubectl run myphp2 --image=registry.hub.docker.com/mohamedthings/hello:40 --port=80'
       //sh 'sudo kubectl expose deployment myphp2 --type=LoadBalancer'
