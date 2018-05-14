@@ -29,7 +29,7 @@ node {
     stage('Deploy stage') {
       sh'echo "Deploing on minikube"'
     //  sh'echo "${env.BUILD_NUMBER}""'
-      sh'sudo -H -u devops bash -c "kubectl run myphp7 --image=registry.hub.docker.com/mohamedthings/hello:48 --port=80"'
+      sh"sudo -H -u devops bash -c 'kubectl run myphp7 --image=registry.hub.docker.com/mohamedthings/hello:${env.BUILD_NUMBER} --port=80'"
       sh'sudo -H -u devops bash -c "kubectl expose deployment myphp7 --type=LoadBalancer"'
       sh'sudo -H -u devops bash -c "minikube service myphp7 --url"'
     }
